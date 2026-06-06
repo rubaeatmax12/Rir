@@ -1,0 +1,21 @@
+import socket
+
+print("\033[92m")
+print("="*40)
+print("   WEBSITE IP FINDER TOOL")
+print("="*40)
+
+website = input("Enter website (example.com): ")
+
+try:
+    ip = socket.gethostbyname(website)
+    print("\nRESULT:")
+    print(f"Website: {website}")
+    print(f"IP Address: {ip}")
+
+    print("\nDefault Ports:")
+    print("HTTP  : 80")
+    print("HTTPS : 443")
+
+except Exception as e:
+    print("Error:", e)
